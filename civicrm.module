@@ -35,10 +35,10 @@ define('CIVICRM_UF_HEAD', TRUE);
 /**
  * Minimum required PHP
  *
- * Note: This duplicates CRM_Upgrade_Form::MINIMUM_PHP_VERSION. The
- * duplication helps avoid a dependency-loop. (Reading `Form::MINIMUM_PHP_VERSION`
- * requires loading `civicrm.settings.php`, but that triggers a parse-error
- * on PHP 5.x.)
+ * As of CiviCRM 5.25, PHP 7.1 is required, but sites running PHP 7.0 are still
+ * allowed to work.  See discussion at
+ * https://github.com/civicrm/civicrm-core/pull/16751.  Eventually, this will
+ * need to be increased to `7.1.0`.
  *
  * @see CRM_Upgrade_Form::MINIMUM_PHP_VERSION
  * @see CiviDrupal\PhpVersionTest::testConstantMatch()
